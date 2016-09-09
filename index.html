@@ -89,11 +89,11 @@
 						<h1>Saiba como ser um Piloto!</h1>
 						<h3>Preencha o formulário abaixo, e receba todas as informações necessárias.</h3>
 					</div>
-					<form action="">
-						<input type="text" class="forminput" id="inputName" placeholder="Nome*" onfocus="myFunction(this)">
-						<input type="email" class="forminput" id="inputEmail" placeholder="Email*" onfocus="myFunction(this)">
-						<input type="text" class="forminput" id="inputTelefone" placeholder="Telefone*" onfocus="myFunction(this)">
-						<input type="submit" class="forminput" value="Enviar">
+					<form action="envia.php" method="post">
+						<input type="text" class="forminput" id="inputName" name="inputName" placeholder="Nome*" onfocus="myFunction(this)">
+						<input type="email" class="forminput" id="inputEmail" name="inputEmail" placeholder="Email*" onfocus="myFunction(this)">
+						<input type="text" class="forminput" id="inputTelefone" name="inputTelefone" placeholder="Telefone*" onfocus="myFunction(this)">
+						<input type="submit" class="forminput" value="Enviar" onclick="alert('Obrigado por entrar em contato!')">
 					</form>
 				</div>
 			</div>
