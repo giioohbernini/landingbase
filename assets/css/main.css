@@ -1,3 +1,6 @@
+:root {
+	--cor1: #dc3117;
+}
 *, 
 *:after,
 *:before {
@@ -15,6 +18,13 @@ h1, h2, h3, h4, h5{
 	font-family: 'Lato', sans-serif;
 	color: #555;
 	font-weight: 800;
+	margin: 0 0 15px;
+}
+
+p{
+	font-family: 'Lato', sans-serif;
+	color: #555;
+	font-weight: 300;
 	margin: 0 0 15px;
 }
 
@@ -37,11 +47,11 @@ header#fk-header {
 }
 
 nav#fk-navbar i {
-	margin-right: 15px;
+	margin-right: 5px;
 }
 
 nav#fk-navbar {
-	display: flex;
+	display: none;
 	width: 100%;
 	flex-direction: column;
 	justify-content: center;
@@ -55,14 +65,20 @@ nav#fk-navbar ul {
 }
 
 nav#fk-navbar ul li a {
-	padding: 10px 29px;
-	margin: 0px 10px;
-	border: solid 1px #555555;
-	color: #555555;
+	padding: 0.5em 1em;
+	margin-left: 10px;
+	border: solid 1px #9e9e9e;
+	color: white;
 	text-decoration: none;
 	border-radius: 2px;
-	font-size: 1.2em;
+	font-size: 1em;
 	display: block;
+	background-color: #dc3117;
+	font-family: 'Lato', sans-serif;
+	text-transform: uppercase;
+	box-shadow: black 1px 1px 18px -5px;
+	-webkit-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
 }
 
 div#fk-divlogo img {
@@ -110,10 +126,17 @@ div.fk-boxes .box {
 	flex-wrap: wrap;
 }
 
-div.fk-form .formbox {
-	width: 100%;
+div.fk-form .formbox:not(:first-child) {
 	border: solid 3px #f1f1f1;
 	border-radius: 2px;
+}
+
+div.fk-form .formbox:not(:first-child):hover {
+	border: solid 3px var(--cor1);
+}
+
+div.fk-form .formbox {
+	width: 100%;
 	flex-grow: 1;
 	margin: 25px 0px; 
 	text-align: center;
@@ -133,7 +156,7 @@ div.fk-form .formbox {
 div.fk-boxes .box:hover {
 	-webkit-transition: all .5s ease-in-out;
 	transition: all .5s ease-in-out;
-	border-color: #dc3117;
+	border-color: var(--cor1);
 }
 
 
@@ -164,6 +187,9 @@ div.fk-boxes .box:hover {
 		width: 300px;
 		flex-grow: 1;
 	}
+	nav#fk-navbar {
+		display: flex;
+	}
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -181,10 +207,16 @@ div.fk-boxes .box:hover {
 		width: 300px;
 		flex-grow: 1;
 	}
+	nav#fk-navbar {
+		display: flex;
+	}
 }
 @media (min-width: 768px) and (max-width: 991px) {
 	.fk-container, .fk-headercontainer {
 		width: 750px;
+	}
+	nav#fk-navbar {
+		display: flex;
 	}
 }
 
@@ -212,7 +244,7 @@ div.fk-title {
 div.fk-boxes .box:hover > .icon-box {
 	-webkit-transition: all .3s ease-in-out;
 	transition: all .3s ease-in-out;
-	color: #dc3117;
+	color: var(--cor1);
 	font-size: 49px;
 	width: 80px;
 	height: 80px;
@@ -222,6 +254,7 @@ div.formbox input[type=text], div.formbox input[type=email] {
 	width: 100%;
 	border: none;
 	border-bottom: solid 1px;
+	border-color: #bbbbbb;
 	padding: 30px 0px 5px 0px;
 	margin-bottom: 10px;
 }
@@ -232,7 +265,7 @@ div.formbox input[type=submit]{
 	border-bottom: solid 1px;
 	padding: 20px 0px;
 	margin: 40px 0px 10px 0px;
-	background-color: #dc3117;
+	background-color: var(--cor1);
 	color: white;
 	font-size: 18px;
 	cursor: pointer;
@@ -240,22 +273,24 @@ div.formbox input[type=submit]{
 
 div.formbox input:focus {
 	outline: 0;
-	border-color: #dc3117;
+	border-color: var(--cor1);
 	-webkit-transition: all .3s ease-in-out;
 	transition: all .3s ease-in-out;
 }
 
 input.effectinput::-webkit-input-placeholder {
-	color: #dc3117;
+	color: var(--cor1);
 	font-size: 10px;
 	transform: translateY(-20px);
 	-webkit-transition: all .3s ease-in-out;
 	transition: all .3s ease-in-out;
 }
 
+
+
 .topform {
 	padding: 20px 15px;
-	background-color: #dc3117;
+	background-color: var(--cor1);
 }
 .topform h1, .topform h3 {
 	color: white;
@@ -263,4 +298,10 @@ input.effectinput::-webkit-input-placeholder {
 
 .formbox form {
 	padding: 20px 15px;
+}
+
+nav#fk-navbar ul li a:hover {
+    transform: scale(1.1);
+    -webkit-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
 }
