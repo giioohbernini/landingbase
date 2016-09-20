@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="stylesheet" href="assets/css/main.css"/>
 	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
-
+	<script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
 
 </head>
 <body>
@@ -97,6 +97,18 @@
 		</div>
 	</section>
 	<footer class="fk-footer"></footer>
+
+	<!-- modal -->
+	<div id="modal">
+		<div class="modal-box"> 
+			<div class="modal-box-conteudo">
+				
+			</div>
+			<div class="close">X</div>
+		</div>
+	</div>
+	<!-- fim modal -->
+
 	<script src="https://use.fontawesome.com/eead50dee4.js" async></script>
 	<script>
 		function myFunction(x) {
@@ -106,6 +118,26 @@
 			}
 			x.className += ' effectinput';
 		}
+		//funcao para abrir modal com form
+		function openPopup(){
+			var cont = 0;
+			$(document).ready(function(e) {
+				$('.close, #modal').click(function(event) {
+					if (event.target !== this) {
+						return;
+					}
+					$('#modal').fadeOut(250);
+					$('#modal').remove();
+				});
+				if (cont === 0) {
+					$("html").mouseleave(function() {
+						$('#modal').fadeIn(500);
+					});
+				}
+				cont=10;
+			});
+		}
+		setTimeout(openPopup, 2000);
 	</script>
 </body>
 </html>
