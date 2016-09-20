@@ -305,3 +305,44 @@ nav#fk-navbar ul li a:hover {
     -webkit-transition: all .3s ease-in-out;
 	transition: all .3s ease-in-out;
 }
+/* css do modal */
+ul.list-unstyled.bottom-0.links {
+	display: none!important;
+}
+#modal{
+	background: rgba(0,0,0,0.5);
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	left: 0px;top: 0px;
+	display: none;
+	z-index: 99999;
+}
+.modal-box{
+	background:url('https://placeholdit.imgix.net/~text?txtsize=75&txt=810%C3%97300&w=810&h=300');
+	width: 45%; height: 300px;
+	left: 50%; top: 50%;
+	position: absolute;
+	margin-left: -22.5%; margin-top: -150px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	max-width:810px;
+}
+.close{
+	padding: 5px 10px;
+	/*border: solid 1px #ccc;*/
+	position: absolute;
+	right: 1px; top:1px;
+	/*border-radius: 5px;*/
+	color: #ccc; cursor: pointer;
+}
+.close:hover{
+	color: #666;
+}
+.modal-box-conteudo form.fc-form.fc-form-2.align-.spin-.save-form-.dont-submit-hidden-.remove-asterisk-.icons-hide-.frame-visible.field-alignment-left.label-placeholder.ng-submitted {
+	border: 0px!important;
+}
+.modal-box-conteudo {
+    padding: 20px;
+}
+/* fim css do modal */
