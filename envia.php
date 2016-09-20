@@ -11,10 +11,10 @@ if (isset($_POST)) {
 	$redirect = "http://hugny.com.br/sites/fkrlanding/";
 
 	$body ="Novo formulário enviado por: <br><br>Nome: $name<br><br>E-Mail: $email<br><br> Telefone: $telefone";
-	
 	if (mail ($to, $subject, $body, $headers)) {
-		// echo "<script>window.history.back();</script>";
-		// echo "<script>alert('Obrigado por entrar em contato!');</script>";
+		echo "<script>alert('Obrigado por entrar em contato!');</script>";
+	}
+	if (mail ($to, $subject, $body, $headers)) {
 		header("location:$redirect");	
 	} else {
 		echo "Não enviado";
